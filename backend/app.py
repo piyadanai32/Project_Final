@@ -44,8 +44,8 @@ def predict():
             return jsonify({
                 'result': result,
                 'percentages': {
-                    class_names[0]: f"{percentages[0]}%",
-                    class_names[1]: f"{percentages[1]}%"
+                    class_names[0]: float(percentages[0]),
+                    class_names[1]: float(percentages[1])
                 }
             })
         else:

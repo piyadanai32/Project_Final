@@ -59,12 +59,12 @@ function UploadImage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r flex flex-col items-center justify-center px-4 text-white">
-      <div className="bg-gray-800 shadow-2xl rounded-2xl p-10 max-w-lg w-full text-center border border-gray-700">
+      <div className="bg-gray-700 shadow-2xl rounded-2xl p-10 max-w-2xl w-full h-auto text-center border border-gray-700">
         <h1 className="text-4xl font-extrabold text-blue-400 mb-6">
           อัปโหลดภาพ Sentinel-2
         </h1>
         <p className="text-gray-300 mb-8 text-lg">
-          เลือกรูปภาพเพื่อจำแนกประเภท เช่น "อ้อย" หรือ "มันสำปะหลัง"
+          เลือกภาพถ่ายดาวเทียม Sentinel-2 เพื่อจำแนกประเภท "อ้อย" หรือ "มันสำปะหลัง"
         </p>
         <div className="mb-6">
           <input
@@ -108,10 +108,10 @@ function UploadImage() {
                 <p className="text-md text-gray-300 mb-6">
                   <strong>ความน่าจะเป็น:</strong>
                   <span className="block mt-2">
-                    <strong>อ้อย:</strong> {percentages["SugarCane"] || "-"}
+                    <strong>อ้อย:</strong> {percentages["SugarCane"] ? percentages["SugarCane"].toFixed(2) : "-"}
                   </span>
                   <span>
-                    <strong>มันสำปะหลัง:</strong> {percentages["Cassava"] || "-"}
+                    <strong>มันสำปะหลัง:</strong> {percentages["Cassava"] ? percentages["Cassava"].toFixed(2) : "-"}
                   </span>
                 </p>
                 {preview && (
@@ -120,7 +120,7 @@ function UploadImage() {
                     <img
                       src={preview}
                       alt="Uploaded Preview"
-                      className="w-64 h-64 object-contain border border-gray-600 rounded-lg shadow-lg"
+                      className="result-image w-64 h-64 object-contain border border-gray-600 rounded-lg shadow-lg"
                     />
                   </div>
                 )}

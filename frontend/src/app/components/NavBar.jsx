@@ -9,17 +9,17 @@ function NavBar() {
         <ul className="flex space-x-6">
           <li>
             <Link to="/" className="hover:text-blue-400 transition">
-              Home
+              หน้าหลัก
             </Link>
           </li>
           <li>
             <Link to="/upload" className="hover:text-blue-400 transition">
-              Upload
+              ทำนาย
             </Link>
           </li>
           <li>
             <Link to="/profile" className="hover:text-blue-400 transition">
-              Profile
+              ผู้จัดทำโครงการ
             </Link>
           </li>
         </ul>

@@ -24,9 +24,16 @@ input[type="file"]:focus {
 
 img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
 img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(99, 179, 237, 0.8);
+}
+
+.result-image {
+    width: 300px; /* Increase width */
+    height: 300px; /* Increase height */
 }
