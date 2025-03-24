@@ -58,30 +58,30 @@ function UploadImage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-100 flex flex-col items-center justify-center px-4">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          อัปโหลดภาพเพื่อจำแนก
+    <div className="min-h-screen bg-gradient-to-r flex flex-col items-center justify-center px-4 text-white">
+      <div className="bg-gray-800 shadow-2xl rounded-2xl p-10 max-w-lg w-full text-center border border-gray-700">
+        <h1 className="text-4xl font-extrabold text-blue-400 mb-6">
+          อัปโหลดภาพ Sentinel-2
         </h1>
-        <p className="text-gray-600 mb-6">
-          กรุณาเลือกรูปภาพ Sentinel-2 เพื่อตรวจสอบว่าคือ "อ้อย" หรือ "มันสำปะหลัง"
+        <p className="text-gray-300 mb-8 text-lg">
+          เลือกรูปภาพเพื่อจำแนกประเภท เช่น "อ้อย" หรือ "มันสำปะหลัง"
         </p>
-        <div className="mb-4">
+        <div className="mb-6">
           <input
             type="file"
             id="fileInput"
             onChange={handleFileChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white cursor-pointer focus:outline-none"
+            className="w-full px-4 py-3 border border-gray-600 rounded-lg text-gray-300 bg-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         {preview && (
-          <div className="mb-4">
-            <p className="text-gray-600 mb-2">ภาพที่คุณเลือก:</p>
+          <div className="mb-6">
+            <p className="text-gray-300 mb-3 text-lg">ภาพที่คุณเลือก:</p>
             <img
               src={preview}
               alt="Preview"
-              className="w-64 h-64 object-contain border border-gray-300 rounded-lg"
+              className="w-64 h-64 object-contain border border-gray-600 rounded-lg shadow-lg"
             />
           </div>
         )}
@@ -89,8 +89,8 @@ function UploadImage() {
         <button
           onClick={handleUpload}
           className={`w-full ${
-            isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
-          } text-white font-semibold py-2 px-4 rounded-lg shadow transition focus:outline-none focus:ring-2 focus:ring-blue-400 mb-6`}
+            isLoading ? "bg-gray-600 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
+          } text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-400 mb-6`}
           disabled={isLoading}
         >
           {isLoading ? "กำลังประมวลผล..." : "อัปโหลดและจำแนก"}
@@ -98,16 +98,16 @@ function UploadImage() {
       </div>
 
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs text-center">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
+          <div className="bg-gray-800 p-8 rounded-2xl shadow-2xl max-w-sm text-center border border-gray-700">
             {result ? (
               <>
-                <p className="text-gray-800 text-lg font-semibold mb-4">
-                  ผลการจำแนก: <span className="text-green-600">{result}</span>
+                <p className="text-blue-400 text-xl font-bold mb-4">
+                  ผลการจำแนก: <span className="text-green-400">{result}</span>
                 </p>
-                <p className="text-sm text-gray-700 mb-4">
+                <p className="text-md text-gray-300 mb-6">
                   <strong>ความน่าจะเป็น:</strong>
-                  <span className="block mt-1">
+                  <span className="block mt-2">
                     <strong>อ้อย:</strong> {percentages["SugarCane"] || "-"}
                   </span>
                   <span>
@@ -115,24 +115,24 @@ function UploadImage() {
                   </span>
                 </p>
                 {preview && (
-                  <div className="mb-4">
-                    <p className="text-gray-600 mb-2">ภาพที่คุณอัปโหลด:</p>
+                  <div className="mb-6">
+                    <p className="text-gray-300 mb-3">ภาพที่คุณอัปโหลด:</p>
                     <img
                       src={preview}
                       alt="Uploaded Preview"
-                      className="w-64 h-64 object-contain border border-gray-300 rounded-lg"
+                      className="w-64 h-64 object-contain border border-gray-600 rounded-lg shadow-lg"
                     />
                   </div>
                 )}
               </>
             ) : (
-              <p className="text-gray-800 text-lg font-semibold mb-4">
+              <p className="text-blue-400 text-xl font-bold mb-4">
                 กรุณาเลือกรูปภาพก่อนอัปโหลด!
               </p>
             )}
             <button
               onClick={refreshPage}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg focus:outline-none"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg focus:outline-none"
             >
               ตกลง
             </button>
