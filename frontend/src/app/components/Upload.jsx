@@ -59,19 +59,19 @@ function UploadImage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r flex flex-col items-center justify-center px-4 text-white">
-      <div className="bg-gray-700 shadow-2xl rounded-2xl p-10 max-w-2xl w-full h-auto text-center border border-gray-700">
+      <div className="shadow-2xl rounded-2xl p-14 max-w-2xl w-full text-center">
         <h1 className="text-4xl font-extrabold text-blue-400 mb-6">
           อัปโหลดภาพ Sentinel-2
         </h1>
         <p className="text-gray-300 mb-8 text-lg">
-          เลือกภาพถ่ายดาวเทียม Sentinel-2 เพื่อจำแนกประเภท "อ้อย" หรือ "มันสำปะหลัง"
+          เลือกภาพถ่ายดาวเทียม Sentinel-2 เพื่อจำแนก "อ้อย" หรือ "มันสำปะหลัง"
         </p>
         <div className="mb-6">
           <input
             type="file"
             id="fileInput"
             onChange={handleFileChange}
-            className="w-full px-4 py-3 border border-gray-600 rounded-lg text-gray-300 bg-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-4 py-3 rounded-lg text-gray-300 bg-gray-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 

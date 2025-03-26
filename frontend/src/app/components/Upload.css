@@ -15,6 +15,10 @@ button:hover {
 
 input[type="file"] {
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #e2e8f0;
 }
 
 input[type="file"]:focus {
@@ -34,6 +38,6 @@ img:hover {
 }
 
 .result-image {
-    width: 300px; /* Increase width */
-    height: 300px; /* Increase height */
+    width: 500px; /* Increase width */
+    height: 250px; /* Increase height */
 }
