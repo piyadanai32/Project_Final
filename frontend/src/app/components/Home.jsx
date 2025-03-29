@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="w-full max-w-2xl p-8 bg-gray-700 rounded-xl text-white shadow-lg text-center">
-        <h1 className="text-2xl font-bold mb-4">สวัสดียินดีต้อนรับเข้าสู่เว็บแอปพลิเคชันจำแนกภาพถ่าย SENTINEL-2 ของอ้อยและมันสัมปะหลัง</h1>
+        <h1 className="text-2xl font-bold mb-4">สวัสดียินดีต้อนรับเข้าสู่เว็บแอปพลิเคชันจำแนกภาพถ่าย SENTINEL-2 ของอ้อยและมันสำปะหลัง</h1>
         <p className="text-lg text-gray-300">
           สำรวจพลังของภาพถ่ายดาวเทียมและ AI ในการจำแนกและวิเคราะห์ข้อมูล
         </p>
