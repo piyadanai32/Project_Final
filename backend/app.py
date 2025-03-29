@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 # โหลดโมเดล
-model = load_model('./Models/test_DenseNet.keras')
+model = load_model('./Models/test_MobileNetV2_100_64.keras')
 
 @app.route('/predict', methods=['POST'])
 def predict():
