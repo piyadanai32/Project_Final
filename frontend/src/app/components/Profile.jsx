@@ -39,7 +39,7 @@ function Profile() {
           className="profile-image w-48 h-48 rounded-full mx-auto mb-4"
         />
         <h2 className="advisor-name text-xl font-semibold">
-          อาจารย์ ดร.แสงดาว นพพทกษ์
+          อาจารย์ ดร.แสงดาว นพพิทักษ์
         </h2>
         <h2 className="advisor-role text-sm">อาจารย์ที่ปรึกษาโครงการ</h2>
       </div>
